@@ -1,20 +1,217 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="app">
+  <section>
+    <div class="page">
+      <div class="inner">
+        <table>
+          <tr>
+            <td>logo1</td>
+            <td>espacio</td>
+            <td>ORDEN DE REPARACIÓN</td>
+          </tr>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <th colspan="6">DATOS DEL VEHÍCULO</th>
+                </tr>
+                <tr>
+                  <td colspan="3">MARCA Y TIPO <input type="text"></td>
+                  <td colspan="2">MODELO <input type="text"></td>
+                  <td colspan="1">COLOR <input type="text"></td>
+                </tr>
+                <tr>
+                  <td rowspan="2">PLACAS <input type="text"></td>
+                  <td colspan="3">Ingreso en plus</td>
+                  <td colspan="2" rowspan="2">dskjdjkjs <input type="text"></td>
+                </tr>
+                <tr>
+                  <td>SI <input type="radio" name="plus" id=""></td>
+                  <td colspan="2">NO <input type="radio" name="plus" id=""></td>
+                </tr>
+                <tr>
+                  <td colspan="4">SERIE <input type="text"></td>
+                  <td>ASEGURADO <input type="radio" name="seg" id=""></td>
+                  <td>TERCERO <input type="radio" name="seg" id=""></td>
+                </tr>
+                <tr>
+                  <td colspan="3">sdsdsdsd</td>
+                  <td colspan="3">CIRCULACIÓN</td>
+                </tr>
+                <tr>
+                  <td colspan="3"><input type="text"></td>
+                  <td colspan="3"><input type="text"></td>
+                </tr>
+              </table>
+            </td>
+            <td>espacio</td>
+            <td>
+              <table>
+                <tr>
+                  <th>DATOS DEL CLIENTE</th>
+                </tr>
+                <tr>
+                  <td>NOMBRE <input type="text"></td>
+                </tr>
+                <tr>
+                  <td>TELEFONOS <input type="text"></td>
+                </tr>
+                <tr>
+                  <td>DATOS DE sSDkd <input type="text"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td>img1</td>
+            <td>img2</td>
+            <td>img3</td>
+            <td>img4</td>
+            <td>img5</td>
+            <td>img6</td>
+            <td>img7</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <th>DESCRIPCIÓN DE DAÑOS A REPARAR</th>
+          </tr>
+          <tr>
+            <td><textarea></textarea></td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <th colspan="4">INVENTARIO</th>
+                </tr>
+                <tr>
+                  <td>Gato</td>
+                  <td><input type="checkbox"></td>
+                  <td>Antena</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Herramienta</td>
+                  <td><input type="checkbox"></td>
+                  <td>Emplemas</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Triangulos</td>
+                  <td><input type="checkbox"></td>
+                  <td>Tapones de Rueda</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Tapetes</td>
+                  <td><input type="checkbox"></td>
+                  <td>Cables</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Llanta refacción</td>
+                  <td><input type="checkbox"></td>
+                  <td>Stereo</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Extinguidor</td>
+                  <td><input type="checkbox"></td>
+                  <td>Encendedor</td>
+                  <td><input type="checkbox"></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td rowspan="2">
+                    <div class="gauge_">
+                      <rg-gauge-chart [canvasWidth]="canvasWidth" [needleValue]="needleValue"
+                        [centralLabel]="centralLabel" [options]="options" [name]="name" [bottomLabel]="bottomLabel">
+                      </rg-gauge-chart>
+                      <input id="slider" type="range" min="0" max="100" class="no-print" (change)="combus($event)" />
+                    </div>
+                  </td>
+                  <td>img1</td>
+                  <td>check</td>
+                </tr>
+                <tr>
+                  <td>abs</td>
+                  <td>oil</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td colspan="3">DAÑOS PREXISTENTES</td>
+          </tr>
+          <tr>
+            <td>Lado derecho</td>
+            <td>Frente</td>
+            <td>Lado izquierdo</td>
+          </tr>
+          <tr>
+            <td>car derecho</td>
+            <td>car frente</td>
+            <td>car izquierdo</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td>
+              <div class="signature">
+                <div id="contSign" onclick = "btn_click()">
+                  <img src="" id="imgSign">
+                </div>
+                <hr>
+                Firma
+              </div>
+            </td>
+            <td>espacio</td>
+            <td>
+                <div class="signature">
+                    <div id="contSign2" onclick = "btn_click2()">
+                      <img src="" id="imgSign2">
+                    </div>
+                    <hr>
+                    Firma
+                  </div>
+            </td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td>Garantizo y aseguro que soy el dueño que estoy autorizando al taller Multiacabados la reparación. Con el trabajo ya descrito junto con las piezas de repuesto y/o materiales necesarios para la reparación.</td>
+          </tr>
+          <tr>
+            <td>Después de 8 días de terminada la reparación se le cobrará pensión por uso de piso.</td>
+          </tr>
+          <tr>
+            <td>Manuela Herrera 85-A Col. Gertrudis Bocanegra Morelia-Mich. (443) 326-28-42 (443) 156-23-09</td>
+          </tr>
+          <tr>
+            <td>multiacabadosmorelia@hotmail.com</td>
+          </tr>
+        </table>
+
+      </div>
+      <div class="no-print" id="printBtn" onclick="window.print()">
+        <img src="assets/save.png" alt="" width="75" height="75">
+      </div>
+    </div>
+  </section>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
