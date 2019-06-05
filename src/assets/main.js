@@ -66,3 +66,21 @@ function resizeCanvas2() {
 window.addEventListener("resize", resizeCanvas);
 window.addEventListener("resize", resizeCanvas2);
 
+//PDF Generator
+var page = document.title;
+var doc = new jsPDF();
+
+function pdf(quality = 1) {
+  var name = document.querySelector('#orden_');
+   const filename = page+name.value+'.pdf';
+
+    html2canvas(document.querySelector('.page'), { scale: quality }).then(canvas => {
+        let pdf = new jsPDF({
+            orientation: 'p',       //portrait
+            unit: 'mm',             //millimeters
+            format: 'letter'        //document size
+        });
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 216, 279);
+        pdf.save(filename);
+    });
+}
