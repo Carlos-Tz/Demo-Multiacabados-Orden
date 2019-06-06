@@ -71,16 +71,44 @@ var page = document.title;
 var doc = new jsPDF();
 
 function pdf(quality = 1) {
-  var name = document.querySelector('#orden_');
-   const filename = page+name.value+'.pdf';
+    var name = document.querySelector('#orden_');
+    const filename = page + name.value + '.pdf';
+    let pdf = new jsPDF({
+        orientation: 'p',       //portrait
+        unit: 'mm',             //millimeters
+        format: 'letter'        //document size
+    });
 
     html2canvas(document.querySelector('.page'), { scale: quality }).then(canvas => {
-        let pdf = new jsPDF({
-            orientation: 'p',       //portrait
-            unit: 'mm',             //millimeters
-            format: 'letter'        //document size
-        });
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 216, 279);
+        pdf.addPage();
+        hoja2(pdf, filename, quality);
+        /* pdf.save(filename); */
+    });
+}
+hoja2 = (pdf, filename, quality) => {
+    html2canvas(document.querySelector('#pag_2'), { scale: quality }).then(canvas => {
         pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 216, 279);
         pdf.save(filename);
     });
+}
+
+function showMyImage(fileInput) {
+    var files = fileInput.files;
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var imageType = /image.*/;
+        if (!file.type.match(imageType)) {
+            continue;
+        }
+        var container = fileInput.parentNode;
+        container.file = file;
+        var reader = new FileReader();
+        reader.onload = (function (aImg) {
+            return function (e) {
+                container.style.backgroundImage = `url(${e.target.result})`;
+            };
+        })(container);
+        reader.readAsDataURL(file);
+    }
 }

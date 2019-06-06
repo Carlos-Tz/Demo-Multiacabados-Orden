@@ -39,25 +39,25 @@ textarea {
   }
 
   #sig1 {
-    background-image: url(/assets/right.jpg);
+    background-image: url('../assets/right.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   #sig2 {
-    background-image: url(/assets/front.jpg);
+    background-image: url('../assets/front.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   #sig3 {
-    background-image: url(/assets/back.jpg);
+    background-image: url('../assets/back.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
   #sig4 {
-    background-image: url(/assets/left.jpg);
+    background-image: url('../assets/left.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -180,4 +180,82 @@ input[type=checkbox]:checked ,input[type=radio]:checked{
 
 input[type=checkbox]:focus,input[type=radio]:focus {
   outline-color: transparent;
+}
+
+.section6 .td:nth-child(1),
+.section6 .td:nth-child(2){
+  width: 50%;
+  text-align: center;
+}
+.section6 .td{
+  border: 1px solid #bbb;
+}
+.image-container input {opacity: 0;}
+.image-container {
+/* background-position: center 3mm; /* Center the image */
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: 100%;
+/*border-radius: 50%;*/
+border: 1px solid #fff;
+}
+.image-container img{
+height: 5cm;
+max-width: 100%;
+}
+#txa {
+background: none;
+border: none;
+resize: none;
+overflow: hidden;
+/*margin-left: 3mm;*/
+font-size: 0.8rem;
+font-weight: 400;
+font-family: var(--font);
+color: var(--text-color);
+width: 9cm;
+}
+input[type=file] {
+width: 8cm;
+height: 5.5cm;
+}
+#sub_title{
+font-size: 1.5em;
+font-weight: 700;
+text-align: center;
+margin-bottom: 2mm;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.tr {
+  display: table-row;
+  height: 6mm;
+ /* font-size: 0.9em;*/
+  font-weight: 600;
+ /* font-size: 0.9em;*/
+}
+ .table .tr.thead .td {
+  padding: 5px 0;
+  background: #222;
+  color: white;
+  font-weight: 700;
+ /* font-size: 0.85em;*/
+}
+
+
+.tr input {
+  border: 1px solid #222;
+  width: 100%;
+}
+.tr.thead {
+  display: table-header-group;
+  height: 6mm;
+  text-align: center;
+}
+.td {
+  display: table-cell;
+  vertical-align: middle;
 }
