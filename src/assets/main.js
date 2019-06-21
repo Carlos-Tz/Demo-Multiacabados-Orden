@@ -29,6 +29,26 @@ function btn_click2() {
     modal2.style.display = "block";
     resizeCanvas2();
 }
+function btn_clear() {
+    document.getElementById('imgSign').src = '';
+    document.getElementById('imgSign2').src = '';
+    document.getElementById('im1').value = '';
+    document.getElementById('im2').value = '';
+    document.getElementById('im3').value = '';
+    document.getElementById('im4').value = '';
+    document.getElementById('im5').value = '';
+    document.getElementById('im6').value = '';
+    document.getElementById('im7').value = '';
+    document.getElementById('im8').value = '';
+    document.getElementById('ci1').style.backgroundImage = 'none';
+    document.getElementById('ci2').style.backgroundImage = 'none';
+    document.getElementById('ci3').style.backgroundImage = 'none';
+    document.getElementById('ci4').style.backgroundImage = 'none';
+    document.getElementById('ci5').style.backgroundImage = 'none';
+    document.getElementById('ci6').style.backgroundImage = 'none';
+    document.getElementById('ci7').style.backgroundImage = 'none';
+    document.getElementById('ci8').style.backgroundImage = 'none';
+  }
 span.onclick = function () {
     modal.style.display = "none";
     document.getElementById('imgSign').src = signaturePad.toDataURL();
@@ -82,6 +102,8 @@ function pdf(quality = 1) {
     html2canvas(document.querySelector('.page'), { scale: quality }).then(canvas => {
         pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 216, 279);
         pdf.addPage();
+      //  hoja2(pdf, quality);
+      //  pdf.addPage();
         hoja2(pdf, filename, quality);
         /* pdf.save(filename); */
     });
@@ -89,9 +111,20 @@ function pdf(quality = 1) {
 hoja2 = (pdf, filename, quality) => {
     html2canvas(document.querySelector('#pag_2'), { scale: quality }).then(canvas => {
         pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 216, 279);
-        pdf.save(filename);
+        pdf.addPage();
+        html2canvas(document.querySelector('#pag_3'), { scale: quality }).then(canvas => {
+            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 216, 279);
+            pdf.save(filename);
+        });
+      //  pdf.save(filename);
     });
 }
+/* hoja3 = (pdf, filename, quality) => {
+    html2canvas(document.querySelector('#pag_3'), { scale: quality }).then(canvas => {
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 216, 279);
+        pdf.save(filename);
+    });
+} */
 
 function showMyImage(fileInput) {
     var files = fileInput.files;

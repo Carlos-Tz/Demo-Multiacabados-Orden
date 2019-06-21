@@ -10,7 +10,7 @@
     --page-inner-margin: 7mm;
     --page-inner-top: 1cm;
     --font: 'Roboto', sans-serif;
-    --font-size: .7em;
+    --font-size: .75em;
     --background: #fafafa;
     --text-color: #111;
     --logo-width: 3.5cm;
@@ -94,6 +94,15 @@
     .page:first-of-type, .page-landscape:first-of-type { margin-top: 0 !important; }
     .page:last-of-type, .page-landscape:last-of-type { margin-bottom: 0 !important; }
     
+    input[type=text], input[type=number], input[type=date], textarea {
+      font-size: 1.2em !important;
+    }
+    h1 {
+      font-size: 2.5em !important;
+    }
+    body {
+      font-size: 0.75em !important;
+    }
   }
 
   #printBtn {
