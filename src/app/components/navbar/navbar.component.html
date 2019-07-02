@@ -16,10 +16,8 @@
           Guardar
         </button>
       </li>
-      <li *ngIf="save==1">
-        <button class="nav-save-btn_ btn waves-effect waves-light" (click)="goBack()">
-          Volver
-        </button>
+      <li *ngIf="save==2">     
+        <button (click)="submitSurveyData()" class="btn nav-save-btn_ waves-effect waves-light" [routerLink]="['/panel']">Actualizar</button>
       </li>
     </ul>
   </div>

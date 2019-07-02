@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { DataTablesModule } from 'angular-datatables';
 import { Ng2ImgMaxModule } from 'ng2-img-max';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { Ng2ImgMaxModule } from 'ng2-img-max';
     LoginComponent,
     NavbarComponent,
     OrdenComponent,
-    ViewOrdenComponent
+    ViewOrdenComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

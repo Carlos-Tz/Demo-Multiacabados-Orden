@@ -13,7 +13,7 @@ import { Form } from 'src/app/models/form';
 export class PanelComponent implements OnInit {
 
   Form: Form[];
-  save = 2;
+  save = 1;
   data_ = false;
   public dtOptions = {};
 

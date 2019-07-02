@@ -23,4 +23,9 @@ export class FormService {
     this.formObject = this.db.object('orden-list/' + key);
     return this.formObject;
   }
+
+  UpdateForm(form: Form, key: string) {
+    this.db.object('orden-list/' + key)
+    .update(form);
+  }
 }
